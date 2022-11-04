@@ -37,8 +37,8 @@ contract Pineapple is Ownable {
 
     
     constructor () {
-        _headPineapple = payable(0xe4F3f40D41aaF11fC0d86B55De9F8F0cE3dfd1f4);
-        _devPineapple = payable(0xD3EFB591A0336037757a21e747C6c4E3e367dedA);
+        _headPineapple = payable();
+        _devPineapple = payable();
         isSaleOpen = false;
         _purchaseHash = keccak256(abi.encodePacked(block.difficulty, block.timestamp, msg.sender));
         _randomUint = uint(keccak256(abi.encodePacked(block.coinbase, block.basefee, block.number)));
